@@ -526,8 +526,14 @@
       <div class="footer-bottom">
         <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
         <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
-        <p>Pravin Mishra Portfolio v1.0 - Deployed on 06 Aug 2026 — By Maneetta Antony</p>
+        <p>Pravin Mishra Portfolio v1.0 - Deployed on <span id="deployDate"></span> — By Maneetta Antony</p>
       </div>
+
+      <script>
+        const options = { day: '2-digit', month: 'short', year: 'numeric' };
+        document.getElementById('deployDate').textContent =
+          new Date().toLocaleDateString('en-GB', options).replace(',', '');
+      </script>
 
     </div>
   </footer>
